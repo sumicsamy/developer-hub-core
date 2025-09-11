@@ -3,4 +3,5 @@ resources:
   - operator-group.yaml
   - subscription.yaml
   - dynamic-plugins-pvc.yaml
+  - developer-hub-core-config.yaml
   - backstage.yaml
