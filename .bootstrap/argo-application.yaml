@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: developer-hub
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: developer-hub
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: .
+    repoURL: 'https://github.com/sumicsamy/developer-hub-core'
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,6 @@
+resources:
+  - namespace.yaml
+  - operator-group.yaml
+  - subscription.yaml
+  - dynamic-plugins-pvc.yaml
+  - backstage.yaml
