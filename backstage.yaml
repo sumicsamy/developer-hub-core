@@ -25,6 +25,9 @@ spec:
     extraEnvs:
       secrets:
          - name: rhdh-credentials
+      envs:
+        - name: LOG_LEVEL
+          value: warn   
     extraFiles:
       mountPath: /opt/app-root/src
     route:
