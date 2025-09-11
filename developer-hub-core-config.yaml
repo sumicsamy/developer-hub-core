@@ -5,15 +5,4 @@ metadata:
 data:
   "developer-hub-core-config.yaml": |
     app:
-      title: Red Hat Developer Hub
-      baseUrl: https://developer-hub.apps.rosa.rosa-mqkkt.lf4g.p3.openshiftapps.com
-    backend:
-      auth:
-        externalAccess:
-            - type: legacy
-              options:
-                subject: legacy-default-config
-                secret: "${BACKEND_SECRET}"
-      baseUrl: https://developer-hub.apps.rosa.rosa-mqkkt.lf4g.p3.openshiftapps.com
-      cors:
-        origin: https://developer-hub.apps.rosa.rosa-mqkkt.lf4g.p3.openshiftapps.com
+      title: Red Hat Developer Hub (Production)
