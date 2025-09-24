@@ -18,15 +18,6 @@ spec:
                 persistentVolumeClaim:
                   claimName: dynamic-plugins-root
   application:
-    replicas: 1              # optional: scale up
-    resources:                 # resources for the Backstage backend pod
-      requests:
-        cpu: "500m"
-        memory: "1Gi"
-      limits:
-        cpu: "2"
-        memory: "4Gi"
-
     appConfig:
       mountPath: /opt/app-root/src
       configMaps:
@@ -37,7 +28,7 @@ spec:
          - name: rhdh-credentials
       envs:
         - name: LOG_LEVEL
-          value: debug   
+          value: warn   
     extraFiles:
       mountPath: /opt/app-root/src
     route:
