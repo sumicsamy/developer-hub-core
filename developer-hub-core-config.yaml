@@ -5,4 +5,4 @@ metadata:
 data:
   "developer-hub-core-config.yaml": |
     app:
-      title: Red Hat Developer Hub (Production)
+      title: ACME Developer Hub (Production)

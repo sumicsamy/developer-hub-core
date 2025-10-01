@@ -3,8 +3,8 @@ apiVersion: rhdh.redhat.com/v1alpha3
 metadata:
   labels:
     app.kubernetes.io/name: backstage
-  name: developer-hub
-  namespace: developer-hub
+  name: acme-developer-hub
+  namespace: acme-developer-hub
 spec:
   deployment:
     patch:
@@ -22,10 +22,10 @@ spec:
       mountPath: /opt/app-root/src
       configMaps:
          - name: developer-hub-core-config
-         - name: my-rhdh-app-config
+         - name: acme-app-config
     extraEnvs:
       secrets:
-         - name: rhdh-credentials
+         - name: acme-dh-credentials
       envs:
         - name: LOG_LEVEL
           value: warn   
@@ -33,7 +33,7 @@ spec:
       mountPath: /opt/app-root/src
     route:
       enabled: true
-      host: rhdh.apps.sno.neat-monster.com
-    dynamicPluginsConfigMapName: dynamic-plugins-cm  
+      host: acme.apps.sno.neat-monster.com
+    dynamicPluginsConfigMapName: acme-dynamic-plugins-cm  
   database:
     enableLocalDb: true  

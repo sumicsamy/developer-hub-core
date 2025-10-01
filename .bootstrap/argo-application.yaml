@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: developer-hub
+  name: acme-developer-hub
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: developer-hub
+    namespace: acme-developer-hub
     server: 'https://kubernetes.default.svc'
   project: default
   source:
