@@ -35,7 +35,6 @@ spec:
         - name: rbac-policies  
     route:
       enabled: true
-      host: acme.apps.sno.neat-monster.com
     dynamicPluginsConfigMapName: acme-dynamic-plugins-cm  
   database:
     enableLocalDb: true  
