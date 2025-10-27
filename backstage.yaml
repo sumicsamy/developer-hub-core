@@ -5,6 +5,8 @@ metadata:
     app.kubernetes.io/name: backstage
   name: acme-developer-hub
   namespace: acme-developer-hub
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   deployment:
     patch:
